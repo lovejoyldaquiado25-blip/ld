@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Luminous Botanicals — Love Joy Daquiado · Upward Focus Creatives</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="subpages.css">
+<template id="__bundler_thumbnail" data-bg-color="#071b14">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#071b14"/>
+    <circle cx="600" cy="380" r="150" fill="#e0cc86"/>
+    <text x="600" y="620" text-anchor="middle" font-family="Georgia, serif" font-weight="700" font-size="52" fill="#eaf0ec" letter-spacing="2">LUMINOUS BOTANICALS</text>
+  </svg>
+</template>
+<style>
+  /* Luminous Botanicals client palette — scoped to this case study only. */
+  body.subpage.luminous {
+    --accent: #C9A24A;
+    --champagne: linear-gradient(135deg, #FFFFFF 0%, #EFE3C0 40%, #D8BE84 75%, #C9A24A 100%);
+  }
+  .luminous .sub-hero {
+    background: radial-gradient(80% 120% at 50% -20%, rgba(15,58,44,0.16), transparent 60%), linear-gradient(180deg, #F7F5EC, #EFEADA);
+  }
+  .luminous .crumb, .luminous .sub-meta .mi small { color: #9c7d2e; }
+  .luminous .case-eyebrow, .luminous .a-num, .luminous .proj-meta .role, .luminous .tf-card h4 { color: #d9b968; }
+  .luminous .case-eyebrow::before { background: #d9b968; }
+
+  /* email client mockup */
+  .mail-frame { border-radius: 16px; overflow: hidden; border: 1px solid rgba(237,242,203,0.10); box-shadow: 0 46px 90px -44px rgba(0,0,0,0.82); background: #0e1512; }
+  .mail-frame .mail-bar { display: flex; align-items: center; gap: 14px; padding: 12px 16px; background: #17211c; border-bottom: 1px solid rgba(237,242,203,0.09); }
+  .mail-frame .dots { display: flex; gap: 7px; flex: none; }
+  .mail-frame .dots i { width: 11px; height: 11px; border-radius: 50%; display: block; }
+  .mail-frame .dots i:nth-child(1){ background:#ff5f57; }
+  .mail-frame .dots i:nth-child(2){ background:#febc2e; }
+  .mail-frame .dots i:nth-child(3){ background:#28c840; }
+  .mail-frame .mail-meta { flex: 1; min-width: 0; font-family: var(--font-body); font-size: 12.5px; color: var(--cream-muted); }
+  .mail-frame .mail-meta b { color: var(--cream-50); font-weight: 600; }
+  .mail-frame .mail-view { max-height: 640px; overflow-y: auto; background: #0e1512; }
+  .mail-frame .mail-view img { width: 100%; display: block; }
+  .mail-frame .mail-view::-webkit-scrollbar { width: 9px; }
+  .mail-frame .mail-view::-webkit-scrollbar-thumb { background: rgba(217,185,104,0.28); border-radius: 9px; }
+
+  .mail-caption { margin-top: 16px; font-family: var(--font-body); font-size: 14px; color: var(--cream-muted); text-align: center; }
+  .mail-caption b { color: var(--cream-50); }
+
+  .email-row { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 30px; }
+
+  /* Instagram-style post mockup for the square social graphic */
+  .ig-frame { width: 100%; max-width: 420px; margin: 30px auto 0; border-radius: 18px; overflow: hidden; border: 1px solid rgba(237,242,203,0.10); box-shadow: 0 46px 90px -44px rgba(0,0,0,0.82); background: #0e1512; }
+  .ig-frame .ig-head { display: flex; align-items: center; gap: 10px; padding: 12px 14px; }
+  .ig-frame .ig-avatar { width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(140deg,#d9b968,#0f3a2c); display: grid; place-items: center; font-family: Georgia, serif; font-size: 13px; color: #fff; flex: none; }
+  .ig-frame .ig-name { font-family: var(--font-body); font-weight: 600; font-size: 13.5px; color: var(--cream-50); }
+  .ig-frame .ig-img { width: 100%; display: block; }
+  .ig-frame .ig-actions { display: flex; gap: 14px; padding: 12px 14px 4px 14px; color: var(--cream-50); }
+  .ig-frame .ig-cap { padding: 4px 14px 16px 14px; font-family: var(--font-body); font-size: 13px; color: var(--cream-muted); }
+  .ig-frame .ig-cap b { color: var(--cream-50); }
+
+  @media (max-width: 900px) {
+    .email-row { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body class="subpage luminous">
+
+<header class="nav scrolled" id="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand" aria-label="Upward Focus Creatives — home">
+      <img src="assets/logo-light.png" alt="Upward Focus Creatives" class="brand-logo">
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <div class="nav-item has-sub">
+        <a href="index.html#work">Work
+          <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </a>
+        <div class="sub-menu">
+          <a href="work-websites.html">Websites</a>
+          <a href="work-graphics.html">Graphics</a>
+          <a href="work-layouts.html">Layouts</a>
+          <a href="work-branding.html">Upward Creatives</a>
+          <a href="work-rosedesk.html">The Rose Desk</a>
+          <a href="work-luminousbotanicals.html">Luminous Botanicals</a>
+        </div>
+      </div>
+      <a href="index.html#process">Process</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <a href="assets/resume.pdf" download class="nav-cta">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
+      Resume
+    </a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html#work">Work</a>
+    <div class="m-sub">
+      <a href="work-websites.html">Websites</a>
+      <a href="work-graphics.html">Graphics</a>
+      <a href="work-layouts.html">Layouts</a>
+      <a href="work-branding.html">Upward Creatives</a>
+      <a href="work-rosedesk.html">The Rose Desk</a>
+      <a href="work-luminousbotanicals.html">Luminous Botanicals</a>
+    </div>
+    <a href="index.html#process">Process</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="assets/resume.pdf" download class="btn btn-primary">Download my Resume</a>
+  </div>
+</header>
+
+<section class="sub-hero">
+  <div class="wrap">
+    <span class="crumb">
+      <a href="index.html#work">Work</a>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+      Luminous Botanicals
+    </span>
+    <h1 style="color:#9c7d2e;">Luminous<br>Botanicals</h1>
+    <p class="tagline">Holiday email campaign for a botanical skincare line — designed in Figma to move a gift-giving audience from inbox to checkout.</p>
+    <div class="sub-meta">
+      <div class="mi"><small>Role</small><b>Email &amp; Social Designer</b></div>
+      <div class="mi"><small>Tools</small><b>Figma</b></div>
+      <div class="mi"><small>Year</small><b>2026</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- EMAIL CAMPAIGN -->
+<section class="case">
+  <div class="wrap">
+    <div class="case-eyebrow">Email Campaign · Figma</div>
+    <div class="mail-frame">
+      <div class="mail-bar">
+        <div class="dots"><i></i><i></i><i></i></div>
+        <div class="mail-meta"><b>Luminous Botanicals</b> — Give The Gift Of Radiance – Just In Time!</div>
+      </div>
+      <div class="mail-view">
+        <img src="assets/lb-email-v1a.jpg" alt="Luminous Botanicals holiday gift email — Give The Gift Of Radiance, version A">
+      </div>
+    </div>
+    <p class="mail-caption"><b>V1 · Gift Promo</b> — dark-teal-to-black gradient hero, gold serif headline, product styled on a carved wood vanity, single gold CTA.</p>
+
+    <div class="email-row">
+      <div>
+        <div class="mail-frame">
+          <div class="mail-bar">
+            <div class="dots"><i></i><i></i><i></i></div>
+            <div class="mail-meta"><b>Luminous Botanicals</b> — Give The Gift Of Radiance (V1B)</div>
+          </div>
+          <div class="mail-view">
+            <img src="assets/lb-email-v1b.jpg" alt="Luminous Botanicals holiday gift email — Give The Gift Of Radiance, version B">
+          </div>
+        </div>
+        <p class="mail-caption"><b>V1 · Variant B</b> — same layout, A/B copy variant for subject-line testing.</p>
+      </div>
+      <div>
+        <div class="mail-frame">
+          <div class="mail-bar">
+            <div class="dots"><i></i><i></i><i></i></div>
+            <div class="mail-meta"><b>Luminous Botanicals</b> — Ends Tonight: 5 Hours Left</div>
+          </div>
+          <div class="mail-view">
+            <img src="assets/lb-email-v2-countdown.jpg" alt="Luminous Botanicals urgency email — Ends Tonight countdown">
+          </div>
+        </div>
+        <p class="mail-caption"><b>V2 · Urgency</b> — countdown graphic and deep-green field drive last-chance discount urgency.</p>
+      </div>
+    </div>
+
+    <div class="proj-meta">
+      <div>
+        <h2>Warm luxury,<br>time-boxed</h2>
+        <div class="role">Campaign Direction</div>
+      </div>
+      <div>
+        <p>A two-part holiday sequence: a gift-guide send styled like a still-life product shot, followed by a same-day urgency reminder. Deep forest green and warm gold carry the "nature's timeless essence" brand line through both sends, while a single bulletproof gold CTA stays consistent across every email.</p>
+        <div class="tf-grid">
+          <div class="tf-card">
+            <h4>Tools Used</h4>
+            <div class="tool"><b>Figma</b><span>Email layout design, exported to production-ready HTML.</span></div>
+          </div>
+          <div class="tf-card">
+            <h4>Key Features</h4>
+            <ul>
+              <li>Table-based, inbox-safe HTML build</li>
+              <li>Gift-promo + countdown urgency sequence</li>
+              <li>Consistent gold CTA &amp; brand voice across sends</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL POST -->
+<section class="case">
+  <div class="wrap">
+    <div class="case-eyebrow">Social Post · Instructional</div>
+    <div class="ig-frame">
+      <div class="ig-head">
+        <div class="ig-avatar">LB</div>
+        <div class="ig-name">luminousbotanicals</div>
+      </div>
+      <img class="ig-img" src="assets/lb-social-directions.jpg" alt="Luminous Botanicals Instagram post — Direction For Use, LB Aurora Glow Face Serum, 4-step routine">
+      <div class="ig-actions">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.9-.9L3 21l1.9-5.1A8.38 8.38 0 0 1 4 11.5 8.5 8.5 0 0 1 12.5 3 8.38 8.38 0 0 1 21 11.5z"/></svg>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2 15 22l-4-9-9-4 20-7z"/></svg>
+      </div>
+      <div class="ig-cap"><b>luminousbotanicals</b> Direction for use: LB Aurora Glow Face Serum — dispense, apply, massage, pat. ✨</div>
+    </div>
+    <p class="mail-caption"><b>Instructional carousel tile</b> — a 4-step routine graphic reused across email, Instagram and packaging inserts for consistent product education.</p>
+
+    <div class="proj-meta">
+      <div>
+        <h2>One graphic,<br>every channel</h2>
+        <div class="role">Content Reuse</div>
+      </div>
+      <div>
+        <p>The direction-for-use tile is built once in Figma at social-post scale, then reused as a product-education send, an Instagram feed post, and a packaging insert — one consistent gold-on-forest-green system across every touchpoint.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sub-cta">
+  <div class="wrap">
+    <h2>Need a campaign that <span class="gleam">converts</span>?</h2>
+    <p>Let's build an email system that carries your brand from inbox to checkout.</p>
+    <div class="hero-actions" style="justify-content:center;">
+      <a href="index.html#contact" class="btn btn-primary">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m0 0l-6-6m6 6l-6 6"/></svg>
+        Start a project
+      </a>
+      <a href="index.html#work" class="btn btn-ghost">Back to all work</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/logo-light.png" alt="Upward Focus Creatives" class="brand-logo" style="height:38px;">
+    </a>
+    <small>© 2026 · Rooted in clarity. Focused on the work. Ascending higher.</small>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="resume.js"></script>
+<script src="image-slot.js"></script>
+</body>
+</html>

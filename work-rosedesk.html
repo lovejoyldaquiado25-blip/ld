@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Rose Desk — Love Joy Daquiado · Upward Focus Creatives</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="subpages.css">
+<template id="__bundler_thumbnail" data-bg-color="#021210">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#021210"/>
+    <circle cx="600" cy="380" r="150" fill="#E8175D"/>
+    <text x="600" y="620" text-anchor="middle" font-family="Georgia, serif" font-weight="700" font-size="60" fill="#eaf0ec" letter-spacing="2">THE ROSE DESK</text>
+  </svg>
+</template>
+<style>
+  /* Rose Desk client palette — scoped to this case study only.
+     Overrides --accent / --champagne so every shared subpages.css
+     component (eyebrow, gleam, cards) re-skins to the client's brand. */
+  body.subpage.rosedesk {
+    --accent: #E8175D;
+    --champagne: linear-gradient(135deg, #FFFFFF 0%, #FBE1E9 40%, #F3A9C2 75%, #E8175D 100%);
+  }
+  .rosedesk .sub-hero {
+    background: radial-gradient(80% 120% at 50% -20%, rgba(232,23,93,0.14), transparent 60%), linear-gradient(180deg, #FEF3F6, #FBE7EE);
+  }
+  .rosedesk .crumb, .rosedesk .sub-meta .mi small { color: #E8175D; }
+  .rosedesk .case-eyebrow, .rosedesk .a-num, .rosedesk .proj-meta .role, .rosedesk .tf-card h4 { color: #F0568E; }
+  .rosedesk .case-eyebrow::before { background: #F0568E; }
+  .rd-logo { height: 64px; width: auto; }
+  .rosedesk .logo-showcase { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .rosedesk .logo-tile { border-radius: 18px; padding: 46px 30px; display: grid; place-items: center; box-shadow: 0 40px 80px -44px rgba(0,0,0,0.7); }
+  .rosedesk .logo-tile.dark { background: linear-gradient(160deg, #2a0d18, #150609); border: 1px solid rgba(255,255,255,0.08); }
+  .rosedesk .logo-tile.light { background: radial-gradient(120% 120% at 50% 14%, #ffffff, #fbe7ee); border: 1px solid rgba(232,23,93,0.10); }
+  .rosedesk .logo-tile img { width: 100%; max-width: 220px; height: auto; }
+  .rosedesk .submark-tile { margin-top: 24px; display: flex; align-items: center; gap: 20px; justify-content: center; }
+  .rosedesk .submark-tile img { height: 64px; width: auto; }
+
+  /* brand guidelines: palette / type / buttons / voice */
+  .rd-palette { display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px; margin-top: 30px; }
+  .rd-swatch { border-radius: 14px; overflow: hidden; border: 1px solid rgba(237,242,203,0.12); box-shadow: 0 20px 40px -26px rgba(0,0,0,0.6); }
+  .rd-swatch .fill { height: 100px; }
+  .rd-swatch .lbl { padding: 12px 14px; background: rgba(7,63,60,0.4); }
+  .rd-swatch .lbl b { display: block; font-family: var(--font-head); font-size: 13.5px; color: var(--cream-50); font-weight: 600; }
+  .rd-swatch .lbl span { font-size: 12px; color: var(--cream-muted); letter-spacing: 0.03em; }
+
+  .rd-type-row { border-radius: 14px; background: rgba(7,63,60,0.4); border: 1px solid rgba(237,242,203,0.10); padding: 28px 30px; margin-top: 22px; }
+  .rd-type-row small { display: block; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #F0568E; margin-bottom: 12px; }
+  .rd-type-row .serif-sample { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; font-size: clamp(28px, 3.8vw, 46px); color: var(--cream-50); letter-spacing: 0; }
+  .rd-type-row .serif-sample.caps { font-variant: small-caps; letter-spacing: 0.02em; }
+  .rd-type-row .body-sample { font-family: var(--font-body); font-size: 17px; line-height: 1.65; color: var(--cream-muted); max-width: 60ch; }
+
+  .rd-buttons { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 30px; align-items: center; }
+  .rd-btn { display: inline-flex; align-items: center; gap: 8px; padding: 15px 28px; border-radius: 999px; font-family: var(--font-body); font-weight: 600; font-size: 15px; }
+  .rd-btn.primary { background: #E8175D; color: #fff; box-shadow: 0 14px 30px -12px rgba(232,23,93,0.6); }
+  .rd-btn.ghost { background: #fff; color: #1a1a1a; border: 1px solid rgba(0,0,0,0.12); }
+
+  .rd-voice-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 30px; }
+  .rd-voice-card { border-radius: 16px; padding: 28px 30px; background: linear-gradient(150deg, rgba(232,23,93,0.10), rgba(7,63,60,0.5)); border: 1px solid rgba(237,242,203,0.10); }
+  .rd-voice-card p { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; font-size: clamp(18px, 2vw, 23px); color: var(--cream-50); line-height: 1.4; margin: 0; }
+  .rd-voice-card span { display: block; margin-top: 12px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #F0568E; }
+
+  @media (max-width: 900px) {
+    .rd-palette { grid-template-columns: repeat(3, 1fr); }
+    .rd-voice-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body class="subpage rosedesk">
+
+<header class="nav scrolled" id="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand" aria-label="Upward Focus Creatives — home">
+      <img src="assets/logo-light.png" alt="Upward Focus Creatives" class="brand-logo">
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <div class="nav-item has-sub">
+        <a href="index.html#work">Work
+          <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </a>
+        <div class="sub-menu">
+          <a href="work-websites.html">Websites</a>
+          <a href="work-graphics.html">Graphics</a>
+          <a href="work-layouts.html">Layouts</a>
+          <a href="work-branding.html">Upward Creatives</a>
+          <a href="work-rosedesk.html">The Rose Desk</a>
+          <a href="work-luminousbotanicals.html">Luminous Botanicals</a>
+        </div>
+      </div>
+      <a href="index.html#process">Process</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <a href="assets/resume.pdf" download class="nav-cta">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
+      Resume
+    </a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html#work">Work</a>
+    <div class="m-sub">
+      <a href="work-websites.html">Websites</a>
+      <a href="work-graphics.html">Graphics</a>
+      <a href="work-layouts.html">Layouts</a>
+      <a href="work-branding.html">Upward Creatives</a>
+      <a href="work-rosedesk.html">The Rose Desk</a>
+      <a href="work-luminousbotanicals.html">Luminous Botanicals</a>
+    </div>
+    <a href="index.html#process">Process</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="assets/resume.pdf" download class="btn btn-primary">Download my Resume</a>
+  </div>
+</header>
+
+<section class="sub-hero">
+  <div class="wrap">
+    <span class="crumb">
+      <a href="index.html#work">Work</a>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+      The Rose Desk
+    </span>
+    <img src="assets/rosedesk-logo-black.png" alt="The Rose Desk logo" class="rd-logo" style="margin-bottom:22px;">
+    <h1 style="color:#E8175D;">The Rose<br>Desk</h1>
+    <p class="tagline">Brand identity and personal website for a social media strategist — designed to turn "I help brands own the feed" into a site that books calls.</p>
+    <div class="sub-meta">
+      <div class="mi"><small>Role</small><b>Brand &amp; Web Designer</b></div>
+      <div class="mi"><small>Tools</small><b>Figma</b></div>
+      <div class="mi"><small>Year</small><b>2026</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- BRANDING -->
+<section class="case">
+  <div class="wrap">
+    <div class="case-eyebrow">Brand Identity</div>
+    <div class="logo-showcase">
+      <div class="logo-tile dark"><img src="assets/rosedesk-logo-white.png" alt="The Rose Desk logo — white lockup on dark"></div>
+      <div class="logo-tile light"><img src="assets/rosedesk-logo-black.png" alt="The Rose Desk logo — black lockup on light"></div>
+    </div>
+    <div class="submark-tile">
+      <img src="assets/rosedesk-submark.png" alt="The Rose Desk rose submark, standalone">
+      <img src="assets/rosedesk-logo-white-02.png" alt="The Rose Desk secondary lockup — ROSE">
+    </div>
+    <div class="annot" style="margin-top:48px;max-width:640px;">
+        <div class="a-row"><span class="a-num">01</span><span class="a-line"></span><span class="a-text"><b>The Rose Mark</b><span>A single bloom, rendered soft and hand-felt — warm against an otherwise minimal wordmark.</span></span></div>
+        <div class="a-row"><span class="a-num">02</span><span class="a-line"></span><span class="a-text"><b>Serif Wordmark</b><span>A classic small-caps serif signals editorial, personal-brand credibility.</span></span></div>
+        <div class="a-row"><span class="a-num">03</span><span class="a-line"></span><span class="a-text"><b>Crimson Pink</b><span>One saturated accent — #E8175D — used only for CTAs and emphasis.</span></span></div>
+        <div class="a-row"><span class="a-num">04</span><span class="a-line"></span><span class="a-text"><b>Submark &amp; Secondary Lockup</b><span>The rose alone and a short "Rose" wordmark cover tight spaces — favicons, socials, packaging.</span></span></div>
+    </div>
+    <div class="proj-meta">
+      <div>
+        <h2>Soft, but<br>still sells</h2>
+        <div class="role">Identity Direction</div>
+      </div>
+      <div>
+        <p>The Rose Desk needed to feel personal and approachable — not another corporate agency deck. A blush-and-crimson palette paired with a serif display face keeps the brand warm, while every CTA stays high-contrast crimson so the site never loses its selling edge.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BRAND GUIDELINES -->
+<section class="case">
+  <div class="wrap">
+    <div class="case-eyebrow">Color System</div>
+    <div class="rd-palette">
+      <div class="rd-swatch"><div class="fill" style="background:#E8175D"></div><div class="lbl"><b>Crimson Pink</b><span>#E8175D</span></div></div>
+      <div class="rd-swatch"><div class="fill" style="background:#F0568E"></div><div class="lbl"><b>Rose</b><span>#F0568E</span></div></div>
+      <div class="rd-swatch"><div class="fill" style="background:#F7C8D8"></div><div class="lbl"><b>Blush</b><span>#F7C8D8</span></div></div>
+      <div class="rd-swatch"><div class="fill" style="background:#FDF6F8"></div><div class="lbl"><b>Petal White</b><span>#FDF6F8</span></div></div>
+      <div class="rd-swatch"><div class="fill" style="background:#1A1A1A"></div><div class="lbl"><b>Ink</b><span>#1A1A1A</span></div></div>
+    </div>
+    <div class="proj-meta">
+      <div>
+        <h2>One accent,<br>used with intent</h2>
+        <div class="role">Palette Logic</div>
+      </div>
+      <div>
+        <p>Crimson pink carries every call-to-action and highlight; nothing else on the page competes with it. Blush and petal-white keep backgrounds soft and personal, while near-black ink handles all reading copy for maximum contrast.</p>
+      </div>
+    </div>
+
+    <div class="case-eyebrow" style="margin-top:56px;">Typography</div>
+    <div class="rd-type-row">
+      <small>Display · Playfair Display 700</small>
+      <div class="serif-sample caps">Own the feed.</div>
+    </div>
+    <div class="rd-type-row">
+      <small>Body · Inter 400 / 500</small>
+      <div class="body-sample">Strategic social media management that turns followers into fans and engagement into revenue. From viral content to paid growth.</div>
+    </div>
+
+    <div class="case-eyebrow" style="margin-top:56px;">Buttons</div>
+    <div class="rd-buttons">
+      <span class="rd-btn primary">View Work →</span>
+      <span class="rd-btn ghost">Download Resume ↓</span>
+    </div>
+    <div class="proj-meta">
+      <div>
+        <h2>Warm, but<br>high-contrast</h2>
+        <div class="role">UI Components</div>
+      </div>
+      <div>
+        <p>Primary actions are a solid crimson pill — impossible to miss against the light backgrounds. Secondary actions stay quiet: white pills with a thin dark outline, used for lower-commitment asks like a resume download.</p>
+      </div>
+    </div>
+
+    <div class="case-eyebrow" style="margin-top:56px;">Brand Voice</div>
+    <div class="rd-voice-grid">
+      <div class="rd-voice-card"><p>"I help brands own the feed."</p><span>Hero Promise</span></div>
+      <div class="rd-voice-card"><p>"I turn attention into assets."</p><span>About Statement</span></div>
+      <div class="rd-voice-card"><p>"How I can help your brand thrive."</p><span>Services Intro</span></div>
+      <div class="rd-voice-card"><p>"Ready to build your next big thing?"</p><span>Closing CTA</span></div>
+    </div>
+    <div class="proj-meta">
+      <div>
+        <h2>Confident,<br>first-person</h2>
+        <div class="role">Voice &amp; Tone</div>
+      </div>
+      <div>
+        <p>Every line speaks directly in first person — "I help," "I turn" — building trust as a personal practice rather than a faceless agency. Sentences stay short and outcome-focused: attention, feed, revenue, growth.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WEBSITE -->
+<section class="case">
+  <div class="wrap">
+    <div class="case-eyebrow">Website · Figma Prototype</div>
+    <div class="breakdown">
+      <div>
+        <a href="https://erikarose.onrender.com/" target="_blank" rel="noopener" class="site-frame" style="display:block;text-decoration:none;">
+          <div class="chrome">
+            <div class="dots"><i></i><i></i><i></i></div>
+            <div class="url">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              erikarose.onrender.com
+            </div>
+          </div>
+          <div class="viewport" style="height:auto;">
+            <img src="assets/rosedesk-hero.jpg" alt="The Rose Desk — homepage hero, 'I help brands own the feed'">
+          </div>
+        </a>
+        <a href="https://erikarose.onrender.com/" target="_blank" rel="noopener" class="scroll-hint" style="text-decoration:none;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          Visit the live site →
+        </a>
+      </div>
+      <div class="annot">
+        <div class="a-row"><span class="a-num">01</span><span class="a-line"></span><span class="a-text"><b>Direct Hero Copy</b><span>"I help brands own the feed" — a clear promise above the fold.</span></span></div>
+        <div class="a-row"><span class="a-num">02</span><span class="a-line"></span><span class="a-text"><b>Dual CTA</b><span>"View Work" and "Download Resume" split cold and warm traffic.</span></span></div>
+        <div class="a-row"><span class="a-num">03</span><span class="a-line"></span><span class="a-text"><b>About Band</b><span>Personal portrait on a soft blush panel builds instant trust.</span></span></div>
+        <div class="a-row"><span class="a-num">04</span><span class="a-line"></span><span class="a-text"><b>Services Grid</b><span>Six clear offers, each with a "see related work" link.</span></span></div>
+        <div class="a-row"><span class="a-num">05</span><span class="a-line"></span><span class="a-text"><b>Process + Work</b><span>A four-step process leads straight into proof of results.</span></span></div>
+        <div class="a-row"><span class="a-num">06</span><span class="a-line"></span><span class="a-text"><b>Contact Form</b><span>Low-friction message form closes out the page.</span></span></div>
+      </div>
+    </div>
+
+    <div class="pages-row">
+      <a href="https://erikarose.onrender.com/" target="_blank" rel="noopener" class="page-card" style="display:block;text-decoration:none;">
+        <div class="site-frame">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="url">erikarose.onrender.com #about</div></div>
+          <div class="viewport" style="height:auto;"><img src="assets/rosedesk-about.jpg" alt="The Rose Desk — About section"></div>
+        </div>
+        <div class="cap">About <small>I turn attention into assets</small></div>
+      </a>
+      <a href="https://erikarose.onrender.com/" target="_blank" rel="noopener" class="page-card" style="display:block;text-decoration:none;">
+        <div class="site-frame">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="url">erikarose.onrender.com #services</div></div>
+          <div class="viewport" style="height:auto;"><img src="assets/rosedesk-services.jpg" alt="The Rose Desk — Services grid"></div>
+        </div>
+        <div class="cap">Services <small>How I help brands thrive</small></div>
+      </a>
+      <a href="https://erikarose.onrender.com/" target="_blank" rel="noopener" class="page-card" style="display:block;text-decoration:none;">
+        <div class="site-frame">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="url">erikarose.onrender.com #work</div></div>
+          <div class="viewport" style="height:auto;"><img src="assets/rosedesk-work.jpg" alt="The Rose Desk — Selected work"></div>
+        </div>
+        <div class="cap">Selected Work <small>Portcullis Post &amp; ALCU-X</small></div>
+      </a>
+    </div>
+
+    <div class="proj-meta">
+      <div>
+        <h2>Rose<br>Desk</h2>
+        <div class="role">Brand &amp; Web Designer</div>
+      </div>
+      <div>
+        <p>Designed end-to-end in <strong style="color:var(--cream-50)">Figma</strong> as a working prototype, this single-page site carries a social media strategist from first impression through booked call — hero promise, proof of process, and a low-friction contact form, all in one warm, on-brand scroll.</p>
+        <div class="tf-grid">
+          <div class="tf-card">
+            <h4>Tools Used</h4>
+            <div class="tool"><b>Figma</b><span>End-to-end UI design, brand system and interactive prototype.</span></div>
+          </div>
+          <div class="tf-card">
+            <h4>Key Features</h4>
+            <ul>
+              <li>One-page scroll from promise to proof to contact</li>
+              <li>Custom brand identity — logo, palette, type</li>
+              <li>Downloadable resume &amp; embedded contact form</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sub-cta">
+  <div class="wrap">
+    <h2>Need a brand that <span class="gleam">owns the feed</span>?</h2>
+    <p>Let's give your personal brand a home worth linking to.</p>
+    <div class="hero-actions" style="justify-content:center;">
+      <a href="index.html#contact" class="btn btn-primary">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m0 0l-6-6m6 6l-6 6"/></svg>
+        Start a project
+      </a>
+      <a href="index.html#work" class="btn btn-ghost">Back to all work</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/logo-light.png" alt="Upward Focus Creatives" class="brand-logo" style="height:38px;">
+    </a>
+    <small>© 2026 · Rooted in clarity. Focused on the work. Ascending higher.</small>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="resume.js"></script>
+<script src="image-slot.js"></script>
+</body>
+</html>
